@@ -3,15 +3,20 @@
   "version": "0.0.1",
   "description": "Example 2016 Web Frontend Stack",
   "dependencies": {
-    "react": "^0.14.8"
+    "babel-polyfill": "^6.7.4",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^0.17.0-rc.5",
+    "copy-webpack-plugin": "^1.1.1",
+    "tsd": "^0.6.5",
     "typescript": "^1.8.9",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "webpack -w",
+    "start": "webpack-dev-server",
     "build": "webpack"
   },
   "author": "Chad Austin",

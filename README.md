@@ -10,6 +10,9 @@ The two obvious choices for language are ES6 (via Babel) or TypeScript.  Since
 TypeScript is basically just ES6 with optional type annotations, I went with
 TypeScript.
 
+Of course, TypeScript wouldn't be very fun if we didn't get all the ES6 standard
+library goodies too.  For that, babel-polyfill is imported.
+
 ## React
 
 React seems to have won the keep-the-DOM-in-sync battle.
