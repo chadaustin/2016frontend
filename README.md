@@ -64,5 +64,5 @@ Now make changes to your source files and reload the page at will!
 
 # Editor
 
-Atom with the ts-language plugin works really well.  I've heard people have good
-luck with Visual Studio Code too.
+Atom with the atom-typescript plugin works really well.  I've heard people have
+good luck with Visual Studio Code too.
