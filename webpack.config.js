@@ -5,10 +5,10 @@ let path = require('path');
 module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
-    path: path.resolve('./src'),
+    root: path.resolve('./src'),
   },
   entry: {
-    main: "entry.ts",
+    main: "entry",
   },
   output: {
     path: __dirname + "/dist",

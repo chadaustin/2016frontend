@@ -1,1 +1,12 @@
-{}
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "sourceRoot": "src",
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false
+}
