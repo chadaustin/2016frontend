@@ -15,11 +15,26 @@ library goodies too.  For that, babel-polyfill is imported.
 
 ## React
 
-React seems to have won the keep-the-DOM-in-sync battle.
+React seems to have won the keep-the-DOM-in-sync battle.  Plus, JSX is darn
+convenient.
+
+## Redux
+
+In my experience, there is no single option for managing client-side data that
+will get you all the way to the end.  Backbone, or any system with individual
+mutable models, can result in state bugs and confusion.  Flux's lack of
+incrementalization has serious performance issues at scale, and Flux does not
+have an answer for knowing when to discard some local data.  Relay depends on
+GraphQL and, at least as of a few months ago, didn't have a story for
+server-side data invalidation.
+
+That said, Redux is a pretty good option, so this template uses that.  You'll
+want to think long and hard about how your application represents, accesses, and
+synchronizes state, however.
 
 ## SASS
 
-Seems to have won over LESS.
+SASS won.
 
 ## Webpack
 
@@ -32,15 +47,22 @@ That said, it supports a ton of stuff right out of the box.
 And, for the record, I've generally preferred ts-loader, but recent bugs in
 ts-loader have led me to using awesome-typescript-loader.
 
-# Preparing
+# Project Setup
 
-`npm install`
+```
+npm install
+node_modules/.bin/tsd install
+```
 
-# Development
+# Running
 
-## Editor
+`npm start`
+
+Then load http://localhost:8080/ in your browser.
+
+Now make changes to your source files and reload the page at will!
+
+# Editor
 
 Atom with the ts-language plugin works really well.  I've heard people have good
 luck with Visual Studio Code too.
-
-`npm start`
