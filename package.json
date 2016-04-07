@@ -11,7 +11,8 @@
     "webpack": "^1.12.14"
   },
   "scripts": {
-    "start": "webpack"
+    "start": "webpack -w",
+    "build": "webpack"
   },
   "author": "Chad Austin",
   "license": "ISC"

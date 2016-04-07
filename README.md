@@ -35,4 +35,9 @@ ts-loader have led me to using awesome-typescript-loader.
 
 # Development
 
+## Editor
+
+Atom with the ts-language plugin works really well.  I've heard people have good
+luck with Visual Studio Code too.
+
 `npm start`

@@ -1,4 +1,3 @@
-(() => {
-    alert("alert");
-    
-})();
+export default function main() {
+  alert("hello!");
+}
