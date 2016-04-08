@@ -1,3 +1,9 @@
-.add-button {
+.add-saying-button {
   color: blue;
+}
+
+.add-modal {
+  .quote, .author, .button-group {
+    display: block;
+  }
 }

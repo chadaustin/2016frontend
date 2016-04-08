@@ -29,7 +29,7 @@ module.exports = {
     react: 'react',
   },
 
-  devtool: 'source-map',
+  //devtool: 'source-map',
 
   module: {
     loaders: [
