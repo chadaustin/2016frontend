@@ -1,10 +1,12 @@
 # What is this?
 
-As of 2016, this is an example project integrating the components of a typical modern web frontend stack.  There are dozens of technology choices at each level of the stack, but the ones I've selected here are perhaps the most common ones.
+2016frontend is an example project integrating the components of a typical modern web frontend stack as of 2016.  There are dozens of possible technology choices at each level of the stack, but the ones I've selected here are perhaps the most common ones.
 
 ## Audience
 
-If you live and breathe web frontend, then there won't be anything new here for you.  
+This project was written for two groups of people: people who've always wanted to play with those newfangled React and TypeScript things, and people who don't work on the web but are curious what it's like.
+
+If you live and breathe web frontend, then there won't be anything new here for you.  I'm sure you have opinions about something I did wrong, so feel free to comment.  :)
 
 ## TypeScript or Babel?
 
@@ -22,17 +24,12 @@ convenient.
 
 ## Redux
 
-In my experience, there is no single option for managing client-side data that
-will get you all the way to the end.  Backbone, or any system with individual
-mutable models, can result in state bugs and confusion.  Flux's lack of
-incrementalization has serious performance issues at scale, and Flux does not
-have an answer for knowing when to discard some local data.  Relay depends on
-GraphQL and, at least as of a few months ago, didn't have a story for
+In my experience, there is no strictly best option for managing client-side state.  I've got extensive experience with Backbone-style MVC/MVP/MVVP architectures and more recent experience with Flux at scale.  Both of them can get you into trouble in different ways.  Individual mutable models gives granular change notifications, but requires careful attention to state transitions.  At the other extreme, due to Flux's lack of
+granular [incrementalization](https://blogs.janestreet.com/incrementality-and-the-web/), you must be careful to avoid performance issues at scale.  Also, Flux does not
+have an answer for knowing when to discard some local data.  Relay seems wonderful, but it depends on GraphQL and, at least as of a few months ago, didn't have a story for
 server-side data invalidation.
 
-That said, Redux is a pretty good option, so this template uses that.  You'll
-want to think long and hard about how your application represents, accesses, and
-synchronizes state, however.
+That said, Flux can be made to work, and Redux looks close enough to Flux and has a better incremental update story, so this template uses that.  Either way, you'll want to think long and hard about how your application represents, accesses, and synchronizes state, however.
 
 ## SASS
 
@@ -40,16 +37,22 @@ SASS won.
 
 ## Webpack
 
-Webpack is not my favorite tool.  The configuration syntax is a bit
-noncomposable, the watcher is a little slow, and some of the plugins are not
+Webpack is not my favorite build tool.  The configuration syntax is a bit
+noncomposable, the watcher is a little slow, and the plugins are not
 always reliable.
 
-That said, it supports a ton of stuff right out of the box.
+That said, it supports a ton of stuff right out of the box, and webpack-dev-loader is great.
 
 And, for the record, I've generally preferred ts-loader, but recent bugs in
-ts-loader have led me to using awesome-typescript-loader.
+ts-loader have led me to try awesome-typescript-loader.  awesome-typescript-loader probably has different bugs.
 
 # Project Setup
+
+OK!  Let's give this a go.
+
+First, git clone the repo and then cd into 2016frontend.
+
+We need to install both the npm dependencies and the TypeScript bindings.  Technically, tsd is deprecated but I couldn't get its replacement, typings, to work.  Pull requests welcome.
 
 ```
 npm install
@@ -57,6 +60,8 @@ node_modules/.bin/tsd install
 ```
 
 # Running
+
+Launching the local development server is as simple as:
 
 `npm start`
 
@@ -74,4 +79,8 @@ good luck with Visual Studio Code too.
 This project does not yet have a unit test framework integrated.  Jasmine
 is okay, and seems to be what people reach for first, but it's not my favorite.  My ideal unit test framework is [imvujstest](https://github.com/imvu/imvujs/tree/master/src/imvujstest).  Someone should decouple it from the imvujs project.  :)
 
+There is no production build or deployment story yet.  Basically, just add some options to webpack.config.js.
+
 The design and styling of the demo app are not as pretty as the TodoMVC examples out there.  But again, this is a project template.  :)
+
+If you have questions about any of these, reach out!  I'm happy to assist.
