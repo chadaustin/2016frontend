@@ -1,10 +1,12 @@
 # What is this?
 
-As of 2016, this is a typical modern frontend web development stack.  There are
-many choices, but these are fairly standard ones.  That said, I'll include some
-justification.
+As of 2016, this is an example project integrating the components of a typical modern web frontend stack.  There are dozens of technology choices at each level of the stack, but the ones I've selected here are perhaps the most common ones.
 
-## TypeScript
+## Audience
+
+If you live and breathe web frontend, then there won't be anything new here for you.  
+
+## TypeScript or Babel?
 
 The two obvious choices for language are ES6 (via Babel) or TypeScript.  Since
 TypeScript is basically just ES6 with optional type annotations, I went with
@@ -66,3 +68,10 @@ Now make changes to your source files and reload the page at will!
 
 Atom with the atom-typescript plugin works really well.  I've heard people have
 good luck with Visual Studio Code too.
+
+# TODO
+
+This project does not yet have a unit test framework integrated.  Jasmine
+is okay, and seems to be what people reach for first, but it's not my favorite.  My ideal unit test framework is [imvujstest](https://github.com/imvu/imvujs/tree/master/src/imvujstest).  Someone should decouple it from the imvujs project.  :)
+
+The design and styling of the demo app are not as pretty as the TodoMVC examples out there.  But again, this is a project template.  :)
