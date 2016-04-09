@@ -6,6 +6,8 @@
 
 This project was written for two groups of people: people who've always wanted to play with those newfangled React and TypeScript things, and people who don't work on the web but are curious what it's like.
 
+It's also for people like me, who roughly know what they want, but can never remember all the myriad configuration settings for webpack and TypeScript and gulp...
+
 If you live and breathe web frontend, then there won't be anything new here for you.  I'm sure you have opinions about something I did wrong, so feel free to comment.  :)
 
 ## TypeScript or Babel?
@@ -33,7 +35,7 @@ That said, Flux can be made to work, and Redux looks close enough to Flux and ha
 
 ## SASS
 
-SASS won.
+SASS won.  Autoprefixer means you don't have to think about any vendor prefixes.
 
 ## Webpack
 
@@ -45,6 +47,10 @@ That said, it supports a ton of stuff right out of the box, and webpack-dev-load
 
 And, for the record, I've generally preferred ts-loader, but recent bugs in
 ts-loader have led me to try awesome-typescript-loader.  awesome-typescript-loader probably has different bugs.
+
+Why is the CSS compilation in Gulp, you ask?  You can use Webpack to compile CSS too, but Webpack doesn't
+make use of multiple cores, and doesn't output anything until everything is built.  (Even SCons and Make get this right.)
+Since CSS compilation is so fast, I find it nice to have it isolated from the Webpack build.  YMMV.
 
 # Project Setup
 
