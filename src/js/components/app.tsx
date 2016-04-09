@@ -51,8 +51,8 @@ class AddSayingButton extends React.Component<AddSayingButtonProps, AddSayingBut
         <label className="quote">Quote <input ref="quote" type="text" /></label>
         <label className="author">Author <input ref="author" type="text" /></label>
         <div className="button-group">
-          <button className="cancel-button">Cancel</button>
-          <button className="submit-button">Submit</button>
+          <button className="cancel-button" onClick={this.onCancel.bind(this)}>Cancel</button>
+          <button className="submit-button" onClick={this.onSubmit.bind(this)}>Submit</button>
         </div>
       </div>;
     } else {
@@ -67,6 +67,17 @@ class AddSayingButton extends React.Component<AddSayingButtonProps, AddSayingBut
 
   onClick() {
     this.setState({popped: true});
+  }
+
+  onCancel() {
+    this.setState({popped: false});
+  }
+
+  onSubmit() {
+    const quote = (this.refs['quote'] as HTMLInputElement).value;
+    const author = (this.refs['author'] as HTMLInputElement).value;
+    this.props.addSaying(quote, author);
+    this.setState({popped: false});
   }
 }
 
