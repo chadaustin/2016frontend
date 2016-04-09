@@ -1,0 +1,9 @@
+.sayings-list {
+  .saying {
+    border-top: 1px solid lightgray;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+}

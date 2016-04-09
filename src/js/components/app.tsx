@@ -48,8 +48,8 @@ class AddSayingButton extends React.Component<AddSayingButtonProps, AddSayingBut
   render() {
     if (this.state.popped) {
       return <div className="add-modal">
-        <label className="quote">Quote <input ref="quote" type="text" /></label>
-        <label className="author">Author <input ref="author" type="text" /></label>
+        <textarea className="quote" ref="quote" placeholder="Quote..." rows="5" />
+        <label className="author">- <input ref="author" placeholder="Author" type="text" /></label>
         <div className="button-group">
           <button className="cancel-button" onClick={this.onCancel.bind(this)}>Cancel</button>
           <button className="submit-button" onClick={this.onSubmit.bind(this)}>Submit</button>

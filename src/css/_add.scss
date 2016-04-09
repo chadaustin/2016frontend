@@ -6,4 +6,14 @@
   .quote, .author, .button-group {
     display: block;
   }
+
+  .quote {
+    font-family: sans-serif;
+    width: 100%;
+    max-width: 40em;
+  }
+
+  .button-group {
+    right: 0;
+  }
 }

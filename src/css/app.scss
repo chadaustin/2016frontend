@@ -1,3 +1,7 @@
 .app-root {
+  margin: 2em;
+  
+  @import 'header';
+  @import 'list';
   @import 'add';
 }
