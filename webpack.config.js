@@ -35,7 +35,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts(x?)$/,
-        loader: 'awesome-typescript-loader',
+        loader: 'ts-loader',
       },
     ],
   },

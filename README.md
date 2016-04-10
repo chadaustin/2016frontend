@@ -43,11 +43,7 @@ Webpack is not my favorite build tool.  The configuration syntax is a bit
 noncomposable, the watcher is slow (and unreliable?), and I regularly find bugs in
 plugins.
 
-That said, it supports a ton of stuff right out of the box, and webpack-dev-loader is great.
-
-And, for the record, I've generally preferred ts-loader, but recent bugs in
-ts-loader have led me to try awesome-typescript-loader.  awesome-typescript-loader probably has different bugs.
-Both have meh performance.
+That said, it supports a ton of stuff right out of the box, and webpack-dev-loader is great.  ts-loader works pretty well.
 
 Why is the CSS compilation in Gulp, you ask?  You can use Webpack to compile CSS too, but Webpack doesn't
 make use of multiple cores, and doesn't output anything until everything is built.  (Even SCons and Make get this right.)
